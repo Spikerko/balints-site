@@ -8,7 +8,7 @@ const REDIRECT_TIMEOUT_MS = 6700;
 
 export default function SiteeRedirect() {
   const { t } = useTranslation()
-  const [text, setText] = useState(t("siteeRedirection.redirectingIn").replace("{i}", "6.700s"));
+  const [text, setText] = useState(t("siteeRedirection.redirectingIn").replace("{i}", "6.700"));
   const startTimeRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function SiteeRedirect() {
       const elapsed = timestamp - startTimeRef.current;
       const timeLeft = Math.max(0, REDIRECT_TIMEOUT_MS - elapsed);
 
-      setText(t("siteeRedirection.redirectingIn").replace("{i}", `${(timeLeft / 1000).toFixed(3)}s`));
+      setText(t("siteeRedirection.redirectingIn").replace("{i}", (timeLeft / 1000).toFixed(3)));
 
       if (timeLeft <= 0) {
         setText(`${t("siteeRedirection.redirectingDone")}...`);

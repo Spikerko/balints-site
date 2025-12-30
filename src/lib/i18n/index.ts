@@ -16,7 +16,7 @@ const translations = {
                 back: "Go Back"
             },
             siteeRedirection: {
-                redirectingIn: "redirecting in {i}",
+                redirectingIn: "redirecting in {i}s",
                 redirectingDone: "redirecting now"
             },
             footer: {
@@ -37,7 +37,7 @@ const translations = {
                 back: "Späť"
             },
             siteeRedirection: {
-                redirectingIn: "poslem ta za {i}",
+                redirectingIn: "poslem ta za {i}s",
                 redirectingDone: "posielam ta teraz"
             },
             footer: {
@@ -53,8 +53,40 @@ const translations = {
                     description: "atiranyitalak a Sitee-omra ocskos",
                 }
             },
+            notFound: {
+                text: "Not Found",
+                back: "Vissza"
+            },
+            siteeRedirection: {
+                redirectingIn: "atiranyitas {i}mp mulva",
+                redirectingDone: "átirányítás most"
+            },
+            footer: {
+                siteMadeBy: "Keszitette: {i}"
+            }
         },
-    }
+    },
+    cz: {
+        translation: {
+            home: {
+                card: {
+                    title: "není zde nic unc",
+                    description: "pošlu tě na mou Sitee",
+                }
+            },
+            notFound: {
+                text: "Not Found",
+                back: "Zpět"
+            },
+            siteeRedirection: {
+                redirectingIn: "pošlu tě za {i}s",
+                redirectingDone: "posílám tě teď"
+            },
+            footer: {
+                siteMadeBy: "Webstránku vytvořil {i}"
+            }
+        }
+    },
 };
 
 i18next
