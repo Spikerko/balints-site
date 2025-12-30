@@ -1,4 +1,5 @@
 import FuzzyText from "@/components/FuzzyText";
+import I18NText from "@/components/I18NText";
 import { Button } from "@/components/ui/button";
 import { IconArrowLeft } from "@tabler/icons-react";
 import Link from "next/link";
@@ -33,11 +34,11 @@ export default function NotFound() {
         glitchMode={false}
         fontSize={"3rem"}
       >
-        Not Found
+        <I18NText text={"notFound.text"} />
       </FuzzyText>
       <Link href={"/"} prefetch={true}>
         <Button variant={"link"} className="text-white cursor-pointer">
-          <IconArrowLeft /> Go Back
+          <IconArrowLeft /> <I18NText text={"notFound.back"} />
         </Button>
       </Link>
     </div>

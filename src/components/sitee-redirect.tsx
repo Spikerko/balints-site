@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import ShinyText from "./ShinyText";
+import { useTranslation } from "react-i18next";
 
 const REDIRECT_TIMEOUT_MS = 6700;
 
 export default function SiteeRedirect() {
-  const [text, setText] = useState("redirecting in 6.700s");
+  const { t } = useTranslation()
+  const [text, setText] = useState(t("siteeRedirection.redirectingIn").replace("{i}", "6.700s"));
   const startTimeRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -20,10 +22,10 @@ export default function SiteeRedirect() {
       const elapsed = timestamp - startTimeRef.current;
       const timeLeft = Math.max(0, REDIRECT_TIMEOUT_MS - elapsed);
 
-      setText(`redirecting in ${(timeLeft / 1000).toFixed(3)}s`);
+      setText(t("siteeRedirection.redirectingIn").replace("{i}", `${(timeLeft / 1000).toFixed(3)}s`));
 
       if (timeLeft <= 0) {
-        setText(`redirecting now...`);
+        setText(`${t("siteeRedirection.redirectingDone")}...`);
         if (process.env.NODE_ENV === "development")
           console.log("Done! (would redirect in production)");
         else window.location.href = "https://yoursit.ee/balint2201";
@@ -35,7 +37,7 @@ export default function SiteeRedirect() {
     animationId = requestAnimationFrame(tick);
 
     return () => cancelAnimationFrame(animationId);
-  }, []);
+  }, [t]);
 
   return (
     <ShinyText
