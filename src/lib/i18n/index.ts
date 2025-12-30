@@ -54,12 +54,12 @@ const translations = {
                 }
             },
             notFound: {
-                text: "Not Found",
+                text: "Nem Talalhato :(",
                 back: "Vissza"
             },
             siteeRedirection: {
                 redirectingIn: "atiranyitas {i}mp mulva",
-                redirectingDone: "atiranyitas most"
+                redirectingDone: "atiranyitas ittenmostan"
             },
             footer: {
                 siteMadeBy: "Keszitette: {i}"
