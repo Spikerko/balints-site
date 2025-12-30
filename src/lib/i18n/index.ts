@@ -59,7 +59,7 @@ const translations = {
             },
             siteeRedirection: {
                 redirectingIn: "atiranyitas {i}mp mulva",
-                redirectingDone: "átirányítás most"
+                redirectingDone: "atiranyitas most"
             },
             footer: {
                 siteMadeBy: "Keszitette: {i}"
